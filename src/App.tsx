@@ -2,15 +2,15 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.scss';
 import {CssBaseline} from "@material-ui/core";
-import Header from "./components/Header/Header";
+import AppBar from "./components/AppBar/AppBar";
 
 const App: React.FC = () => {
   return (
     <div className="app-container">
       <CssBaseline />
-        {/*Header goes here*/}
+        {/*AppBar goes here*/}
 
-        <Header />
+        <AppBar />
 
         {/*Content goes here*/}
 

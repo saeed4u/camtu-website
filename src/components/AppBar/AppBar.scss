@@ -1,4 +1,6 @@
-.header-container{
+@import "../../styles/variables";
+
+.nav-bar-container{
   padding: 0 !important;
   width: 100%;
   height: auto;
@@ -17,7 +19,7 @@
   }
 }
 
-.header-main{
+.nav-bar-main{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -25,4 +27,19 @@
   margin: 0 auto;
   width: calc(100% - 2rem);
   height: 4em;
+}
+
+.nav-bar-brand {
+  display: block;
+  background-size: auto;
+  height: 4em;
+  width: 6em;
+}
+
+
+@include respond-above(lg){
+  .nav-bar-main{
+    width: calc(100% - 5rem);
+    max-width: 80rem;
+  }
 }
