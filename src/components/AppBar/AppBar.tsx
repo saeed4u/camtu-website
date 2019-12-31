@@ -7,6 +7,8 @@ const AppBar: React.FC = () => (
     <header className="nav-bar-container">
         <div className="nav-bar-main">
             <Avatar src={camtuLogo} className="nav-bar-brand"/>
+            <Avatar src={camtuLogo} className="nav-bar-brand"/>
+            <Avatar src={camtuLogo} className="nav-bar-brand"/>
         </div>
     </header>
 )

@@ -1,0 +1,10 @@
+@import '../../../styles/variables';
+
+.app-nav-item-container{
+  a{
+    color: $primary-color;
+    &:hover{
+      color: $secondary-color;
+    }
+  }
+}
