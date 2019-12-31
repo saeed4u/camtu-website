@@ -19,10 +19,14 @@
   }
 }
 
+.MuiAvatar-root{
+  cursor: pointer;
+}
+
 .nav-bar-main{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
   width: calc(100% - 2rem);

@@ -1,10 +1,23 @@
 @import '../../../styles/variables';
 
 .app-nav-item-container{
+
   a{
+    display: block;
     color: $primary-color;
-    &:hover{
+    margin-right: 1.8em;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    &:hover
+    {
+     color: $secondary-color;
+      -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      transform: scale(0.9);
+    }
+    &.active{
       color: $secondary-color;
+      border-bottom: $primary-color 1px solid;
     }
   }
 }
