@@ -1,12 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.scss';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import './styles/main.scss';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import {MuiThemeProvider} from "@material-ui/core";
+import {camtuTheme} from "./styles/camtuTheme";
+import App from "./App";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+const renderApp = (Component: any) => (
+    <MuiThemeProvider theme={camtuTheme}>
+        <Component />
+    </MuiThemeProvider>
+);
+
+
+const startApp = () => ReactDOM.render(renderApp(App), document.getElementById('root'));
+
+startApp();
+

@@ -1,0 +1,69 @@
+/* THEME COLORS */
+$primary-color: #FF9800;
+$secondary-color: #F57C00;
+$accent-color: #FFF;
+
+/* STATE COLORS */
+$success-color: #009688;
+$active-accent-color: #de5a4d;
+$disabled-color: #bdbdbd;
+
+/* LINE COLORS */
+$line-color: #e9ecf5;
+$border-color: #ced0d6;
+
+
+/* GENERAL COLORS */
+$white-color: #fff;
+$black-color: #000000;
+
+/* TEXT COLORS */
+$primary-text-color: $white-color;
+$secondary-text-color: rgba($primary-text-color, 0.5);
+$alternative-text-color: #e9ecf5;
+
+/* ICON COLORS */
+$primary-icon-color: rgba($primary-text-color, 0.5);
+$secondary-icon-color: #e9ecf5;
+
+/* BACKGROUND COLORS */
+$primary-bg-color: #f8f8f8;
+
+
+/* GRADIENTS */
+$table-gradient: linear-gradient(to right, rgba(242, 242, 242, 0.2), rgba(242, 242, 242, 0));
+$blue-gradient: linear-gradient(to right, rgba(#5f9ff6, 0.7), rgba(#0b67e2, 1));
+$green-gradient: linear-gradient(to right, rgba(#a2d88f, 0.7), rgba(#39af10, 1));
+$coral-gradient: linear-gradient(to bottom right, rgba(#ff6f61, 1), rgba(#f2994a, 1));
+$prize-gradient: linear-gradient(to top left, rgba(#39af10, 1) -2%, rgba(#a2d88f, 0.7) 107%);
+
+/* SHADOWS */
+$main-shadow: 0 2px 2px rgba($black-color, 0.1);
+
+/* BREAKPOINTS */
+$breakpoints: (
+  xxs: 420px,
+  xs: 576px,
+  sm: 768px,
+  md: 992px,
+  lg: 1280px,
+);
+
+$font-family: 'AvenirNextReg', serif;
+
+
+@import 'mixins';
+
+//noinspection ALL
+:export {
+  primary_color: $primary-color;
+  secondary_color: $secondary-color;
+  accent_color: $accent-color;
+  success_color: $success-color;
+  disabled_color: $disabled-color;
+  active_color: $active-accent-color;
+  border_color: $border-color;
+  primary_text_color: $primary-text-color;
+  secondary_text_color: $secondary-text-color;
+  font_family: $font-family;
+}

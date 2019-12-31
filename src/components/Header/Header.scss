@@ -1,0 +1,28 @@
+.header-container{
+  padding: 0 !important;
+  width: 100%;
+  height: auto;
+  min-height: 4em;
+  z-index: 1000;
+  background-color: #FFF;
+  position: fixed;
+  &::after{
+    content: "";
+    position: absolute;
+    top: calc(4em - 1);
+    left: 0;
+    height: 1px;
+    width: 100%;
+    box-shadow: 0 2px 2px 0 rgba(40,75,124,.08);
+  }
+}
+
+.header-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: calc(100% - 2rem);
+  height: 4em;
+}
