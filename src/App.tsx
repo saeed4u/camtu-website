@@ -1,22 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import {CssBaseline} from "@material-ui/core";
 import AppBar from "./components/AppBar/AppBar";
+import {Router, Switch} from "react-router";
 
-const App: React.FC = () => {
-  return (
-    <div className="app-container">
-      <CssBaseline />
-        {/*AppBar goes here*/}
+interface AppProps {
+    history: any
+}
 
-        <AppBar />
+const App: React.FC<AppProps> = (props: AppProps) => {
+    return (
+        <Router history={props.history}>
+            <div className="app-container">
+                <CssBaseline/>
 
-        {/*Content goes here*/}
+                <Switch>
+                    {/*AppBar goes here*/}
 
-        {/*Footer goes here*/}
-    </div>
-  );
+                    <AppBar/>
+
+                    {/*Content goes here*/}
+
+                    {/*Footer goes here*/}
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
