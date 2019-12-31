@@ -1,0 +1,55 @@
+@import "../../styles/variables";
+
+.footer-container{
+  display: flex;
+  flex-direction: row;
+  background-color: #EF6C00;
+  min-height: 10em;
+}
+
+.footer-main{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding-top: .6em;
+  padding-bottom: .6em;
+  width: calc(100% - 2rem);
+
+  .nav-container{
+    display: flex;
+    flex-direction: column;
+
+    .app-nav-item-container{
+
+      a{
+        display: block;
+        color: #CFD8DC;
+        margin-top: 1em;
+        font-size: 1em;
+        text-transform: uppercase;
+        &:hover
+        {
+          color: $accent-color;
+          -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+          transform: scale(0.9);
+        }
+        &.active{
+          color: $accent-color;
+          border-bottom: $accent-color 1px solid;
+        }
+      }
+    }
+  }
+}
+
+
+
+@include respond-above(lg){
+  .footer-main{
+    width: calc(100% - 5rem);
+    max-width: 80rem;
+  }
+}
