@@ -2,7 +2,8 @@ import React from 'react';
 import './App.scss';
 import {CssBaseline} from "@material-ui/core";
 import AppBar from "./components/AppBar/AppBar";
-import {Router, Switch} from "react-router";
+import {Router} from "react-router";
+import Footer from "./components/Footer/Footer";
 
 interface AppProps {
     history: any
@@ -11,18 +12,20 @@ interface AppProps {
 const App: React.FC<AppProps> = (props: AppProps) => {
     return (
         <Router history={props.history}>
+            <CssBaseline/>
             <div className="app-container">
-                <CssBaseline/>
 
-                <Switch>
-                    {/*AppBar goes here*/}
+                {/*AppBar goes here*/}
 
-                    <AppBar/>
+                <AppBar/>
 
-                    {/*Content goes here*/}
+                {/*Content goes here*/}
 
-                    {/*Footer goes here*/}
-                </Switch>
+                <main>
+                    Content goes here ...
+                </main>
+                {/*Footer goes here*/}
+                <Footer/>
             </div>
         </Router>
     );

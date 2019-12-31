@@ -1,4 +1,15 @@
-.app-container{
+.app-container {
   display: flex;
   flex-direction: column;
+  height: 100%;
+
+  main {
+    flex: 1 0 auto;
+    min-height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+  }
 }

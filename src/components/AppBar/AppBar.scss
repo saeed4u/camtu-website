@@ -7,7 +7,6 @@
   min-height: 4em;
   z-index: 1000;
   background-color: #FFF;
-  position: fixed;
   &::after{
     content: "";
     position: absolute;
@@ -31,6 +30,34 @@
   margin: 0 auto;
   width: calc(100% - 2rem);
   height: 4em;
+  .nav-container{
+    display: flex;
+    margin-left: 15vw;
+    justify-self: center;
+
+
+    .app-nav-item-container{
+
+      a{
+        display: block;
+        color: $primary-color;
+        margin-right: 1.8em;
+        font-size: 1em;
+        text-transform: uppercase;
+        &:hover
+        {
+          color: $secondary-color;
+          -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+          transform: scale(0.9);
+        }
+        &.active{
+          color: $secondary-color;
+          border-bottom: $primary-color 1px solid;
+        }
+      }
+    }
+  }
 }
 
 .nav-bar-brand {
