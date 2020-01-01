@@ -40,6 +40,8 @@ const navs: Array<AppBarNavProps> = [
 
 const AppBar: React.FC = () => {
 
+    
+
     const [menuAnchor, setMenuAnchor] = useState<null | HTMLElement>(null)
 
     const handleMenuClick = (event: React.MouseEvent<any>) => {

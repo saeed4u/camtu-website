@@ -57,7 +57,7 @@
 
 @include respond-above(md) {
   .hamburger-menu{
-    display: none;
+    display: none !important;
   }
   .nav-bar-main{
     justify-content: flex-start;

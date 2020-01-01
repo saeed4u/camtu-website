@@ -5,3 +5,12 @@
   justify-content: center;
   color: $white-color;
 }
+
+@include respond-below(sm){
+  .brand-name{
+    font-size: 1.2em !important;
+  }
+  .copyright-container{
+    align-self: flex-start;
+  }
+}
