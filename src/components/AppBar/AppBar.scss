@@ -1,61 +1,45 @@
 @import "../../styles/variables";
 
-.nav-bar-container{
+.nav-bar-container {
   padding: 0 !important;
   width: 100%;
   height: auto;
   min-height: 4em;
   z-index: 1000;
   background-color: #FFF;
-  &::after{
+
+  &::after {
     content: "";
     position: absolute;
     top: calc(4em - 1);
     left: 0;
     height: 1px;
     width: 100%;
-    box-shadow: 0 2px 2px 0 rgba(40,75,124,.08);
+    box-shadow: 0 2px 2px 0 rgba(40, 75, 124, .08);
   }
 }
 
-.MuiAvatar-root{
+.MuiAvatar-root {
   cursor: pointer;
 }
 
-.nav-bar-main{
+.nav-bar-main {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   width: calc(100% - 2rem);
   height: 4em;
-  .nav-container{
+
+  .nav-container {
     display: flex;
     margin-left: 15vw;
     justify-self: center;
 
 
-    .app-nav-item-container{
-
-      a{
-        display: block;
-        color: $primary-color;
-        margin-right: 1.8em;
-        font-size: 1em;
-        text-transform: uppercase;
-        &:hover
-        {
-          color: $secondary-color;
-          -webkit-transform: scale(0.9);
-          -ms-transform: scale(0.9);
-          transform: scale(0.9);
-        }
-        &.active{
-          color: $secondary-color;
-          border-bottom: $primary-color 1px solid;
-        }
-      }
+    .app-nav-item-container {
+      display: none;
     }
   }
 }
@@ -67,9 +51,48 @@
   width: 6em;
 }
 
+.hamburger-menu{
+  justify-self: flex-end;
+}
 
-@include respond-above(lg){
+@include respond-above(md) {
+  .hamburger-menu{
+    display: none;
+  }
   .nav-bar-main{
+    justify-content: flex-start;
+  }
+  .nav-bar-container {
+    .nav-container {
+      .app-nav-item-container {
+        display: flex;
+
+        a {
+          display: block;
+          color: $primary-color;
+          margin-right: 1.8em;
+          font-size: 1em;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $secondary-color;
+            -webkit-transform: scale(0.9);
+            -ms-transform: scale(0.9);
+            transform: scale(0.9);
+          }
+
+          &.active {
+            color: $secondary-color;
+            border-bottom: $primary-color 1px solid;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond-above(lg) {
+  .nav-bar-main {
     width: calc(100% - 5rem);
     max-width: 80rem;
   }

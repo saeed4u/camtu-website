@@ -1,9 +1,7 @@
 import React from "react";
 import './Footer.scss'
-import {Avatar, Paper, Typography} from "@material-ui/core";
-import NavContainer, {NavContainerProps} from "../Nav/NavContainer";
+import NavContainer from "../Nav/NavContainer";
 import {AppBarNavProps} from "../Nav/Nav";
-import camtuLogo from "../../assets/images/logo.jpeg";
 import Copyright from "../Copyright/Copyright";
 
 const leftNav: Array<AppBarNavProps> = [
